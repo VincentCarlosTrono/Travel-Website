@@ -7,9 +7,14 @@ const Header = () => {
       list: "Home",
       path: "/",
     },
+
     {
       list: "Discover",
       path: "/discover",
+    },
+    {
+      list: "About",
+      path: "/about",
     },
     {
       list: "Place",
@@ -49,9 +54,6 @@ const Header = () => {
                 </Link>
               );
             })}
-            <a href="#about">
-              <li>About</li>
-            </a>
           </ul>
           <div className="cursor-pointer">
             <box-icon

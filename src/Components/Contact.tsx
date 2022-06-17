@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
   const ContactInfos = [
@@ -28,7 +29,9 @@ const Contact = () => {
         const { title, info1, info2, info3 } = ContactInfo;
         return (
           <div>
-            <h1 className="text-2xl py-3 font-semibold text-green2">{title}</h1>
+            <h1 className="text-2xl py-3 font-semibold text-green2 ">
+              {title}
+            </h1>
             <div className="max-w-xs text-green3 text-xl">
               <p className="cursor-pointer hover:text-green2">{info1}</p>
               <p className="py-2 cursor-pointer hover:text-green2">{info2}</p>

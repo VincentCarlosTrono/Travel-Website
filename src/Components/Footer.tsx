@@ -5,16 +5,16 @@ import Copyright from "./Copyright";
 const Footer = () => {
   const FooterIcons = [
     {
-      icon: <box-icon name="facebook-square" type="logo" />,
+      icon: <box-icon color="gray" name="facebook-square" type="logo" />,
     },
     {
-      icon: <box-icon name="twitter" type="logo" />,
+      icon: <box-icon color="gray" name="twitter" type="logo" />,
     },
     {
-      icon: <box-icon name="instagram-alt" type="logo" />,
+      icon: <box-icon color="gray" name="instagram-alt" type="logo" />,
     },
     {
-      icon: <box-icon name="youtube" type="logo" />,
+      icon: <box-icon color="gray" name="youtube" type="logo" />,
     },
   ];
 
@@ -30,7 +30,11 @@ const Footer = () => {
             <div className="flex py-10 gap-7">
               {FooterIcons.map((FooterIcon: any) => {
                 const { icon } = FooterIcon;
-                return <div className="flex ">{icon}</div>;
+                return (
+                  <div className="flex cursor-pointer hover:opacity-100 opacity-50">
+                    {icon}
+                  </div>
+                );
               })}
             </div>
           </div>

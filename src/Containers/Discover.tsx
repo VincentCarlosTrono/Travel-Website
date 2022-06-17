@@ -3,8 +3,8 @@ import discover1 from "../Media/img/discover1.jpg";
 import discover2 from "../Media/img/discover2.jpg";
 import discover3 from "../Media/img/discover3.jpg";
 import discover4 from "../Media/img/discover4.jpg";
-import Experience from "./Experience";
-import Tour from "./Tour";
+import Experience from "../Components/Experience";
+import Tour from "../Components/Tour";
 
 const Discover = () => {
   const DiscoverImages = [
