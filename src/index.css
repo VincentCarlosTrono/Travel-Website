@@ -17,15 +17,30 @@ body {
   margin: 0;
   font-family: Raleway, Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.cards-absolute {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+}
 
 a {
   color: inherit;
   text-decoration: none;
 }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .container {
   grid-column-start: 2;
   grid-column-end: 3;
+  align-items: center;
 }
 
 .grid-container {

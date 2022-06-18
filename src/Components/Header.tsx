@@ -41,8 +41,10 @@ const Header = () => {
       }`}
     >
       <div className="container flex justify-between">
-        <h1 className="cursor-pointer">Travel</h1>
-        <div className="flex gap-4">
+        <Link to="/">
+          <h1 className="cursor-pointer font-semibold">Travel</h1>
+        </Link>
+        <div className="flex gap-4 items-center">
           <ul className="flex gap-16">
             {HeaderLists.map((HeaderList: any) => {
               const { list, path } = HeaderList;

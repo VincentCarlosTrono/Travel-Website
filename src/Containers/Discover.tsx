@@ -37,7 +37,7 @@ const Discover = () => {
           <h1 className="py-14">Discover The Most Attractive Places</h1>
         </div>
 
-        <div className="grid grid-cols-4 gap-5">
+        <div className="flex justify-center gap-5">
           {DiscoverImages.map((DiscoverImage: any) => {
             const { image, title, tours } = DiscoverImage;
             return (
@@ -48,7 +48,7 @@ const Discover = () => {
                   className="hover:scale-110 cursor-pointer"
                 />
 
-                <div className="absolute  bottom-0 left-0 p-10 text-white">
+                <div className="cards-absolute   text-white">
                   <h1 className="text-4xl font-semibold">{title}</h1>
                   <p>{tours}</p>
                 </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const Subscription = () => {
@@ -7,9 +8,11 @@ const Subscription = () => {
       <h1 className="text-4xl px-96 text-white font-semibold">
         Subscribe Our Newsletter
       </h1>
+
       <p className="py-16 text-xl text-white">
         Subscribe to our newsletter and get a special 30% discount.
       </p>
+
       <div className="flex justify-center">
         <div className="bg-white p-2 max-w-xl">
           <input
@@ -17,7 +20,9 @@ const Subscription = () => {
             type="text"
             placeholder="Enter Email"
           />
-          <Button title="Subscribe" />
+          <Link to="/">
+            <Button title="Subscribe" />
+          </Link>
         </div>
       </div>
     </div>
