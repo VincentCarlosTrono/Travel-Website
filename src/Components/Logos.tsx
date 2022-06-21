@@ -28,7 +28,7 @@ const Logos = () => {
       {Sponsors.map((Sponsor: any) => {
         const { logo } = Sponsor;
         return (
-          <div className="opacity-50 cursor-pointer hover:opacity-100">
+          <div className="opacity-50 cursor-pointer hover:opacity-100 ">
             <img src={logo} alt="sponsoorsLogo" />
           </div>
         );

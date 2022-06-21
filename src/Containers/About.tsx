@@ -5,6 +5,7 @@ import Button from "../Components/Button";
 import Subscription from "src/Components/Subscription";
 import Logos from "src/Components/Logos";
 import { Link } from "react-router-dom";
+import Title from "src/Components/Title";
 
 const About = () => {
   return (
@@ -12,9 +13,10 @@ const About = () => {
       <div className="container">
         <div className=" flex gap-5 items-center justify-between ">
           <div>
-            <h1 className="text-green2 text-5xl max-w-xl">
+            <h1 className="font-semibold text-4xl text-left dark:text-green4">
               More Information About The Best Beaches
             </h1>
+
             <p className="py-10 text-md max-w-lg text-green3">
               You can find the most beatiful and pleasant places at the best
               prices with special discounts, you choose the place we will guide

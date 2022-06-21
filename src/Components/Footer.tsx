@@ -23,7 +23,9 @@ const Footer = () => {
       <div className="container">
         <div className="flex justify-between">
           <div>
-            <h1 className="text-2xl py-3 font-semibold text-green2">Travel</h1>
+            <h1 className="text-2xl py-3 font-semibold text-green2 dark:text-green4">
+              Travel
+            </h1>
             <p className="max-w-xs text-green3 text-xl">
               Travel you choose the destination, we offer you the experience.
             </p>

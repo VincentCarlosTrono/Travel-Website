@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "src/Components/Button";
+import Title from "src/Components/Title";
 import Place1 from "../Media/img/place1.jpg";
 import Place2 from "../Media/img/place2.jpg";
 import Place3 from "../Media/img/place3.jpg";
@@ -48,9 +49,7 @@ const Places = () => {
   return (
     <div className="grid-container py-36" id="place">
       <div className="container">
-        <h1 className="text-center text-4xl text-green1 py-16">
-          Choose Your Place
-        </h1>
+        <Title title="Choose Your Place" />
         <div className="grid-column">
           {PlaceCards.map((PlaceCard: any) => {
             const { image, name, location, price, favorite } = PlaceCard;

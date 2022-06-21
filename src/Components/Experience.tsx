@@ -1,6 +1,7 @@
 import React from "react";
 import experience1 from "../Media/img/experience1.jpg";
 import experience2 from "../Media/img/experience2.jpg";
+import Title from "./Title";
 
 const Experience = () => {
   const ExperienceDescriptions = [
@@ -20,9 +21,7 @@ const Experience = () => {
 
   return (
     <div className=" py-36">
-      <h1 className="py-14 font-semibold text-4xl px-96 text-center">
-        With Our Experience We Will Serve You
-      </h1>
+      <Title title="With Our Experience We Will Serve You" />
 
       <div>
         <div className="px-96 flex justify-center  gap-10">
@@ -30,7 +29,9 @@ const Experience = () => {
             const { numbers, text } = ExperienceDescription;
             return (
               <div>
-                <h1 className="text-green2 text-4xl py-3">{numbers}</h1>
+                <h1 className="text-green2 text-4xl py-3 dark:text-green4">
+                  {numbers}
+                </h1>
                 <p className=" text-xl text-green3">{text}</p>
               </div>
             );

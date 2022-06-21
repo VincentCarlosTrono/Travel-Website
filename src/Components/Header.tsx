@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeContext } from "src/ContextAPI/ThemeContext";
 
 const Header = () => {
   const HeaderLists = [
@@ -22,10 +23,10 @@ const Header = () => {
     },
   ];
 
+  const { isDarkmode, setIsDarkmode } = useContext(ThemeContext);
+
   const location = useLocation();
-
   const isPathnameHome = location.pathname === "/";
-
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -37,7 +38,8 @@ const Header = () => {
   return (
     <div
       className={`grid-container fixed w-full top-0 z-10  py-8 text-xl text-white font-semibold ${
-        (scroll || !isPathnameHome) && "bg-white text-green1  shadow-md"
+        (scroll || !isPathnameHome) &&
+        "bg-white dark:bg-darkgreen text-green1 dark:text-green4  shadow-md"
       }`}
     >
       <div className="container flex justify-between">
@@ -57,12 +59,25 @@ const Header = () => {
               );
             })}
           </ul>
-          <div className="cursor-pointer">
-            <box-icon
-              color={scroll || !isPathnameHome ? "black" : "white"}
-              name="moon"
-            />
-          </div>
+
+          <button
+            onClick={() => {
+              setIsDarkmode(!isDarkmode);
+            }}
+          >
+            {isDarkmode ? (
+              <div className="cursor-pointer px-3 py-2">
+                <box-icon color="white" name="sun" />
+              </div>
+            ) : (
+              <div className="cursor-pointer px-3 py-2">
+                <box-icon
+                  color={scroll || !isPathnameHome ? "black" : "white"}
+                  name="moon"
+                />
+              </div>
+            )}{" "}
+          </button>
         </div>
       </div>
     </div>

@@ -21,13 +21,13 @@ const Hero = () => {
             </Link>
           </div>
           <div className="flex pt-8 gap-12">
-            <div>
+            <div className="hover:opacity-100 opacity-50 cursor-pointer hover:-translate-y-1">
               <box-icon color="white" name="facebook-square" type="logo" />
             </div>
-            <div>
+            <div className="hover:opacity-100 opacity-50 cursor-pointer hover:-translate-y-1">
               <box-icon color="white" name="instagram-alt" type="logo" />
             </div>
-            <div>
+            <div className="hover:opacity-100 opacity-50 cursor-pointer hover:-translate-y-1">
               <box-icon color="white" name="twitter" type="logo" />
             </div>
           </div>

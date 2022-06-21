@@ -5,6 +5,7 @@ import discover3 from "../Media/img/discover3.jpg";
 import discover4 from "../Media/img/discover4.jpg";
 import Experience from "../Components/Experience";
 import Tour from "../Components/Tour";
+import Title from "src/Components/Title";
 
 const Discover = () => {
   const DiscoverImages = [
@@ -34,7 +35,7 @@ const Discover = () => {
     <div className="grid-container pt-16" id="discover">
       <div className="container py-20">
         <div className="text-center text-5xl px-80">
-          <h1 className="py-14">Discover The Most Attractive Places</h1>
+          <Title title="Discover The Most Attractive Places" />
         </div>
 
         <div className="flex justify-center gap-5">

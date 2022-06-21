@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -7,14 +7,16 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Discover from "./Containers/Discover";
 import About from "./Containers/About";
 import Places from "./Containers/Places";
+import { ThemeContext } from "./ContextAPI/ThemeContext";
 
 function App() {
-  const location = useLocation();
+  const { isDarkmode } = useContext(ThemeContext);
 
+  const location = useLocation();
   const HomepagePath = location.pathname === "/";
 
   return (
-    <div className="App">
+    <div className={isDarkmode ? "dark" : "App"}>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />

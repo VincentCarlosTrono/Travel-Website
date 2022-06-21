@@ -29,7 +29,7 @@ const Contact = () => {
         const { title, info1, info2, info3 } = ContactInfo;
         return (
           <div>
-            <h1 className="text-2xl py-3 font-semibold text-green2 ">
+            <h1 className="text-2xl py-3 font-semibold text-green2 dark:text-green4">
               {title}
             </h1>
             <div className="max-w-xs text-green3 text-xl">
