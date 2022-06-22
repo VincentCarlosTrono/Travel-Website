@@ -4,6 +4,7 @@ import logo2 from "../Media/img/sponsors2.png";
 import logo3 from "../Media/img/sponsors3.png";
 import logo4 from "../Media/img/sponsors4.png";
 import logo5 from "../Media/img/sponsors5.png";
+import { SponsorInterface } from "src/types";
 
 const Logos = () => {
   const Sponsors = [
@@ -25,7 +26,7 @@ const Logos = () => {
   ];
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-24 py-20  items-center">
-      {Sponsors.map((Sponsor: any) => {
+      {Sponsors.map((Sponsor: SponsorInterface) => {
         const { logo } = Sponsor;
         return (
           <div className="opacity-50 cursor-pointer hover:opacity-100 ">

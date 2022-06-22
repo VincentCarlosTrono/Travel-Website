@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HeaderPropsInterface } from "./Header";
+import { HeaderListInterface, HeaderPropsInterface } from "src/types";
 
 const HeaderMobile = (props: HeaderPropsInterface) => {
   const { isOpen, setIsOpen } = props;
@@ -32,7 +32,7 @@ const HeaderMobile = (props: HeaderPropsInterface) => {
         setIsOpen(!isOpen);
       }}
     >
-      {HeaderLists.map((HeaderList: any) => {
+      {HeaderLists.map((HeaderList: HeaderListInterface) => {
         const { list, path } = HeaderList;
         return (
           <Link to={path}>

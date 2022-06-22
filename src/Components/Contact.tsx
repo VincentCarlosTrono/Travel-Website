@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { ContactInfoInterface } from "src/types";
 
 const Contact = () => {
   const ContactInfos = [
@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
     <div className="md:flex gap-40">
-      {ContactInfos.map((ContactInfo: any) => {
+      {ContactInfos.map((ContactInfo: ContactInfoInterface) => {
         const { title, info1, info2, info3 } = ContactInfo;
         return (
           <div className="md-py-0 py-3">

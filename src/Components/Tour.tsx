@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Title from "./Title";
 import ReactPlayer from "react-player";
 import myVideo from "../Media/img/Video/video.mp4";
-import Title from "./Title";
+
 const Tour = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 

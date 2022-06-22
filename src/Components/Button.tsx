@@ -1,6 +1,7 @@
 import React from "react";
+import { ButtonPropsInterface } from "src/types";
 
-const Button = (props: any) => {
+const Button = (props: ButtonPropsInterface) => {
   const { title } = props;
 
   return (

@@ -6,6 +6,7 @@ import Place2 from "../Media/img/place2.jpg";
 import Place3 from "../Media/img/place3.jpg";
 import Place4 from "../Media/img/place4.jpg";
 import Place5 from "../Media/img/place5.jpg";
+import { PlaceCardInterface } from "src/types";
 
 const Places = () => {
   const PlaceCards = [
@@ -51,7 +52,7 @@ const Places = () => {
       <div className="container">
         <Title title="Choose Your Place" />
         <div className="grid-column gap-5 ">
-          {PlaceCards.map((PlaceCard: any) => {
+          {PlaceCards.map((PlaceCard: PlaceCardInterface) => {
             const { image, name, location, price, favorite } = PlaceCard;
             return (
               <div className="flex justify-center">

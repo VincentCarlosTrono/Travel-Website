@@ -1,7 +1,8 @@
 import React from "react";
+import Title from "./Title";
 import experience1 from "../Media/img/experience1.jpg";
 import experience2 from "../Media/img/experience2.jpg";
-import Title from "./Title";
+import { ExperienceDescriptionInterface } from "src/types";
 
 const Experience = () => {
   const ExperienceDescriptions = [
@@ -25,17 +26,19 @@ const Experience = () => {
 
       <div>
         <div className="md:px-96 px-10 flex justify-center  gap-10">
-          {ExperienceDescriptions.map((ExperienceDescription: any) => {
-            const { numbers, text } = ExperienceDescription;
-            return (
-              <div>
-                <h1 className="text-green2 text-4xl py-3 dark:text-green4">
-                  {numbers}
-                </h1>
-                <p className=" text-sm md:text-xl text-green3">{text}</p>
-              </div>
-            );
-          })}
+          {ExperienceDescriptions.map(
+            (ExperienceDescription: ExperienceDescriptionInterface) => {
+              const { numbers, text } = ExperienceDescription;
+              return (
+                <div>
+                  <h1 className="text-green2 text-4xl py-3 dark:text-green4">
+                    {numbers}
+                  </h1>
+                  <p className=" text-sm md:text-xl text-green3">{text}</p>
+                </div>
+              );
+            }
+          )}
         </div>
       </div>
       <div className="md:py-14 py-7 relative ">

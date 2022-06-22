@@ -1,9 +1,9 @@
 import React from "react";
+import Subscription from "src/Components/Subscription";
+import Button from "../Components/Button";
+import Logos from "src/Components/Logos";
 import About1 from "../Media/img/about1.jpg";
 import About2 from "../Media/img/about2.jpg";
-import Button from "../Components/Button";
-import Subscription from "src/Components/Subscription";
-import Logos from "src/Components/Logos";
 import { Link } from "react-router-dom";
 
 const About = () => {

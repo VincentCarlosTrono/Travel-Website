@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "./Contact";
 import Copyright from "./Copyright";
+import { FooterIconInterface } from "src/types";
 
 const Footer = () => {
   const FooterIcons = [
@@ -30,7 +31,7 @@ const Footer = () => {
               Travel you choose the destination, we offer you the experience.
             </p>
             <div className="flex py-10 gap-7">
-              {FooterIcons.map((FooterIcon: any) => {
+              {FooterIcons.map((FooterIcon: FooterIconInterface) => {
                 const { icon } = FooterIcon;
                 return (
                   <div className="flex cursor-pointer hover:opacity-100 opacity-50">

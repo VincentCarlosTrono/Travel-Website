@@ -1,12 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
+import HeaderMobile from "./HeaderMobile";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "src/ContextAPI/ThemeContext";
-import HeaderMobile from "./HeaderMobile";
-
-export interface HeaderPropsInterface {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { HeaderListInterface } from "src/types";
 
 const Header = () => {
   const HeaderLists = [
@@ -55,7 +51,7 @@ const Header = () => {
         </Link>
         <div className="flex gap-4 items-center">
           <ul className="md:flex gap-16  hidden">
-            {HeaderLists.map((HeaderList: any) => {
+            {HeaderLists.map((HeaderList: HeaderListInterface) => {
               const { list, path } = HeaderList;
               return (
                 <Link to={path}>

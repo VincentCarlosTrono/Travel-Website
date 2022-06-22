@@ -1,11 +1,12 @@
 import React from "react";
+import Tour from "../Components/Tour";
+import Title from "src/Components/Title";
 import discover1 from "../Media/img/discover1.jpg";
 import discover2 from "../Media/img/discover2.jpg";
 import discover3 from "../Media/img/discover3.jpg";
 import discover4 from "../Media/img/discover4.jpg";
 import Experience from "../Components/Experience";
-import Tour from "../Components/Tour";
-import Title from "src/Components/Title";
+import { DiscoverImageInterface } from "src/types";
 
 const Discover = () => {
   const DiscoverImages = [
@@ -39,7 +40,7 @@ const Discover = () => {
         </div>
 
         <div className="md:flex justify-center gap-5">
-          {DiscoverImages.map((DiscoverImage: any) => {
+          {DiscoverImages.map((DiscoverImage: DiscoverImageInterface) => {
             const { image, title, tours } = DiscoverImage;
             return (
               <div className="relative py-3 overflow-hidden">

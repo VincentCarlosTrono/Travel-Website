@@ -4,6 +4,18 @@ import Home2 from "../Media/img/home2.jpg";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const SocMeds = [
+    {
+      icon: <box-icon color="white" name="facebook-square" type="logo" />,
+    },
+    {
+      icon: <box-icon color="white" name="instagram-alt" type="logo" />,
+    },
+    {
+      icon: <box-icon color="white" name="twitter" type="logo" />,
+    },
+  ];
+
   return (
     <div className="grid-container bg-home" id="/">
       <div className="container flex items-center text-white relative">
@@ -23,15 +35,13 @@ const Hero = () => {
             </Link>
           </div>
           <div className="md:flex md:pt-8 md:gap-12">
-            <div className="hover:opacity-100 opacity-50 cursor-pointer hover:-translate-y-1">
-              <box-icon color="white" name="facebook-square" type="logo" />
-            </div>
-            <div className="hover:opacity-100 opacity-50 md:py-0 py-5 cursor-pointer hover:-translate-y-1">
-              <box-icon color="white" name="instagram-alt" type="logo" />
-            </div>
-            <div className="hover:opacity-100 opacity-50 cursor-pointer hover:-translate-y-1">
-              <box-icon color="white" name="twitter" type="logo" />
-            </div>
+            {SocMeds.map(({ icon }) => {
+              return (
+                <div className="hover:opacity-100 opacity-50 cursor-pointer hover:-translate-y-1">
+                  {icon}
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="flex absolute  bottom-5 md:bottom-20 right-0 justify-between items-center h-28 w-3/4  md:h-44 max-w-sm p-5 bg-green1 ">

@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import "./App.css";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
 import HomePage from "./Containers/HomePage";
-import { Routes, Route, useLocation } from "react-router-dom";
+import Header from "./Components/Header";
 import Discover from "./Containers/Discover";
-import About from "./Containers/About";
 import Places from "./Containers/Places";
+import About from "./Containers/About";
+import Footer from "./Components/Footer";
 import { ThemeContext } from "./ContextAPI/ThemeContext";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
   const { isDarkmode } = useContext(ThemeContext);
