@@ -24,7 +24,7 @@ const Logos = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-5 gap-24 py-20  items-center">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-24 py-20  items-center">
       {Sponsors.map((Sponsor: any) => {
         const { logo } = Sponsor;
         return (

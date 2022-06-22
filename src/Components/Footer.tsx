@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <div className="grid-container py-20 border-t-2 shadow-xl">
       <div className="container">
-        <div className="flex justify-between">
+        <div className="md:flex  justify-between">
           <div>
             <h1 className="text-2xl py-3 font-semibold text-green2 dark:text-green4">
               Travel

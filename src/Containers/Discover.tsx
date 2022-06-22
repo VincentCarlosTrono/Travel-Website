@@ -38,11 +38,11 @@ const Discover = () => {
           <Title title="Discover The Most Attractive Places" />
         </div>
 
-        <div className="flex justify-center gap-5">
+        <div className="md:flex justify-center gap-5">
           {DiscoverImages.map((DiscoverImage: any) => {
             const { image, title, tours } = DiscoverImage;
             return (
-              <div className="relative overflow-hidden">
+              <div className="relative py-3 overflow-hidden">
                 <img
                   src={image}
                   alt="DiscoverImage"

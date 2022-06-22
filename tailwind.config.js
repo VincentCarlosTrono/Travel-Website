@@ -17,7 +17,10 @@ module.exports = {
         "7rem": "7rem"
       },
       padding: {
-        "2rem": "2rem"
+        "2rem": "2rem",
+      },
+      spacing:{
+        "13rem": "13rem"
       }
     },
   },

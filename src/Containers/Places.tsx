@@ -47,15 +47,15 @@ const Places = () => {
   ];
 
   return (
-    <div className="grid-container py-36" id="place">
+    <div className="grid-container justify-between paddingY" id="place">
       <div className="container">
         <Title title="Choose Your Place" />
-        <div className="grid-column">
+        <div className="grid-column gap-5 ">
           {PlaceCards.map((PlaceCard: any) => {
             const { image, name, location, price, favorite } = PlaceCard;
             return (
-              <div className="flex justify-center py-2">
-                <div className="relative overflow-hidden">
+              <div className="flex justify-center">
+                <div className="relative overflow-hidden ">
                   <img
                     className="cursor-pointer hover:scale-110"
                     src={image}

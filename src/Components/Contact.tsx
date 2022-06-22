@@ -24,11 +24,11 @@ const Contact = () => {
   ];
 
   return (
-    <div className="flex gap-40">
+    <div className="md:flex gap-40">
       {ContactInfos.map((ContactInfo: any) => {
         const { title, info1, info2, info3 } = ContactInfo;
         return (
-          <div>
+          <div className="md-py-0 py-3">
             <h1 className="text-2xl py-3 font-semibold text-green2 dark:text-green4">
               {title}
             </h1>

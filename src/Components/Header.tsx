@@ -1,6 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "src/ContextAPI/ThemeContext";
+import HeaderMobile from "./HeaderMobile";
+
+export interface HeaderPropsInterface {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 const Header = () => {
   const HeaderLists = [
@@ -24,6 +30,7 @@ const Header = () => {
   ];
 
   const { isDarkmode, setIsDarkmode } = useContext(ThemeContext);
+  const [isOpen, setIsOpen] = useState(false);
 
   const location = useLocation();
   const isPathnameHome = location.pathname === "/";
@@ -47,7 +54,7 @@ const Header = () => {
           <h1 className="cursor-pointer font-semibold">Travel</h1>
         </Link>
         <div className="flex gap-4 items-center">
-          <ul className="flex gap-16">
+          <ul className="md:flex gap-16  hidden">
             {HeaderLists.map((HeaderList: any) => {
               const { list, path } = HeaderList;
               return (
@@ -60,6 +67,24 @@ const Header = () => {
             })}
           </ul>
 
+          <button
+            className="md:hidden block"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            <box-icon
+              color={
+                isDarkmode
+                  ? isDarkmode && "white"
+                  : isPathnameHome
+                  ? " white"
+                  : "black"
+              }
+              name="grid-alt"
+            ></box-icon>
+          </button>
+          {isOpen && <HeaderMobile isOpen={isOpen} setIsOpen={setIsOpen} />}
           <button
             onClick={() => {
               setIsDarkmode(!isDarkmode);
@@ -76,7 +101,7 @@ const Header = () => {
                   name="moon"
                 />
               </div>
-            )}{" "}
+            )}
           </button>
         </div>
       </div>

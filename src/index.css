@@ -11,6 +11,18 @@
   /* border: 1px dashed green; */
 }
 
+.positioning {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.paddingY {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 html,
 body {
   padding: 0;
@@ -33,6 +45,7 @@ a {
 }
 
 .grid-column {
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -49,4 +62,16 @@ a {
     minmax(1rem, 1fr)
     minmax(1rem, 1200px)
     minmax(1rem, 1fr);
+}
+
+@media screen and (max-width: 750px) {
+  .grid-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
 }
